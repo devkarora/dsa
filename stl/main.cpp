@@ -1,5 +1,6 @@
 https://www.topcoder.com/community/competitive-programming/tutorials/power-up-c-with-the-standard-template-library-part-1/#containers
 
+#include <bits/stdc++.h> 
 
 definition : The Standard Template Library (STL) is a set of C++ template classes to provide 
 common programming data structures and functions such as lists, stacks, arrays, etc. 
