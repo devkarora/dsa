@@ -57,7 +57,8 @@ void recurSelectionSort(int a[], int n, int index = 0)
 
 
 
-
+// PURE RECURSIVE
+https://www.sanfoundry.com/c-program-selection-sort-using-recursion/
 
 
 
