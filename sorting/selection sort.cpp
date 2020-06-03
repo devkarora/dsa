@@ -12,7 +12,7 @@ void selection_sort(int arr[], int n){
                 min_index = j;
             }
         }
-        //swap of minimum of the remaining array to the right position from the front
+        // Swap the found minimum element with the first element         
         int temp=arr[i];
         arr[i] = arr[min_index];
         arr[min_index] = temp;
