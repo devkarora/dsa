@@ -2,14 +2,14 @@ it is just like bubble sort. The minimum of the remaining array comes the right 
 
 //ITERATIVE
 void selection_sort(int arr[], int n){
-    
+    // One by one move boundary of unsorted subarray
     for(int i=0;i<n-1;i++){
     
         int min_index=0;
-        
-        for(int unsort_index=i+1 ; unsort_index<n ; unsort_index++){
-            if(arr[unsort_index] < arr[min_index]){
-                min_index = unsort_index;
+     // Find the minimum element in unsorted array  
+        for(int j=i+1 ; j<n ; j++){
+            if(arr[j] < arr[min_index]){
+                min_index = j;
             }
         }
         //swap of minimum of the remaining array to the right position from the front
