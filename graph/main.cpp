@@ -137,10 +137,8 @@ adjacency matrix pros :
   we create an array of pointers just like above in 2d matrix re[resentation of adjacency matrix , but instead of adding
   array of size n , we use dynamic vectors to represent vertices frmo a -> b
   so its like
-   0-> 1,2,3
-   1->0,3,4
-   2->0
-   3->0,1
-   4->1
-                                                                 
-                                                                 
+  0-> 1,2,3
+  1->0,3,4
+  2->0
+  3->0,1
+  4->1                                                                 
