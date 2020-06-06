@@ -64,7 +64,7 @@ a complete graph , every vertex has an edge with every other edge)
  2 1 // edge from 2 to 1
  1 3 // edge from 1 to 3
  
-  output
+  output in dfs
   0
   2
   1
