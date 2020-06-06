@@ -122,27 +122,25 @@ int main(){
  print(mat, visited , n , 0); 
 }
     
+https://www.geeksforgeeks.org/graph-and-its-representations/
+adjacency matrix pros :
+   easier to implement
+   removing an edge takes O(1)
+   Queries like whether there is an edge from vertex ‘u’ to vertex ‘v’ are efficient and can be done O(1)
+    
+    cons:
+    consumes O(V^2) space
+    adding a vertex is O(V^2) time
     
     
-    
-    
-    
-    
-   
-   
-   
-   
-   
-   
-   
-   
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+  adjcency list representation
+  we create an array of pointers just like above in 2d matrix re[resentation of adjacency matrix , but instead of adding
+  array of size n , we use dynamic vectors to represent vertices frmo a -> b
+  so its like
+   0-> 1,2,3
+   1->0,3,4
+   2->0
+   3->0,1
+   4->1
+                                                                 
+                                                                 
