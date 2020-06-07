@@ -32,3 +32,28 @@ BINARY INSERTION SORT :
     
     
     
+ GRAPHS : 
+https://www.geeksforgeeks.org/graph-and-its-representations/
+    adjacency matrix implementation :  TIME
+                                        removing an edge O(1)
+                                        marking an edge(1)
+                                        query to check if vertex from (u) to (v) exist : O(1)
+                                        Adding a vertex is O(V^2) time.
+                                       SPACE
+                                        O(V^2) space in all cases
+    
+    adjacency list implementation : TIME 
+                                      adding vertex is easier
+                                      query if vertex from (u) to (v) exist take O(V) time , not efficient
+   
+                                     SPACE : 
+                                            O(|V| + |E|) , in worst case there can be vChoose2 (V^2) nuber of edges, hence worst case O(V^2)
+      
+      
+      
+      
+      
+      
+      
+      
+    
