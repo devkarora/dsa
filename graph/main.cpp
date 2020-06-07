@@ -147,7 +147,8 @@ adjacency matrix pros :
    https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/  
 // above using lists stl c++
   https://www.geeksforgeeks.org/graph-implementation-using-stl-for-competitive-programming-set-1-dfs-of-unweighted-and-undirected/
- // above using vectors stl c++
+ https://www.geeksforgeeks.org/graph-and-its-representations/
+// above using vectors stl c++
 
 #include<bits/stdc++.h> 
 using namespace std; 
