@@ -70,7 +70,7 @@ a complete graph , every vertex has an edge with every other edge)
   1
   3
   
-
+IMPLEMENTATION OF UNDIRECTED GRAPH
 
 #include<bits/stdc++.h>
 using namespace std;
@@ -107,7 +107,7 @@ int main(){
       int e;
       cin>>f>>e;
       mat[f][e]=1; // since our graph is bi directional hence we need to mark f->e and e->f both as 1
-      mat[e][f]=1;
+      mat[e][f]=1; // remove this line to make it directional
  }
 
   
@@ -123,6 +123,7 @@ int main(){
 }
     
 https://www.geeksforgeeks.org/graph-and-its-representations/
+
 adjacency matrix pros :
    easier to implement
    removing an edge takes O(1)
@@ -133,7 +134,7 @@ adjacency matrix pros :
     adding a vertex is O(V^2) time
     
     
-  adjcency list representation
+  adjcency list representation using list in c++
   we create an array of pointers just like above in 2d matrix re[resentation of adjacency matrix , but instead of adding
   array of size n , we use dynamic vectors to represent vertices frmo a -> b
   so its like
@@ -141,4 +142,98 @@ adjacency matrix pros :
   1->0,3,4
   2->0
   3->0,1
-  4->1                                                                 
+  4->1
+  IMPLEMENTATION OF A DIRECTED GRAPH using lists in stl c++
+   https://www.geeksforgeeks.org/depth-first-search-or-dfs-for-a-graph/  
+// above using lists stl c++
+  https://www.geeksforgeeks.org/graph-implementation-using-stl-for-competitive-programming-set-1-dfs-of-unweighted-and-undirected/
+ // above using vectors stl c++
+
+#include<bits/stdc++.h> 
+using namespace std; 
+  
+// Graph class represents a directed graph 
+// using adjacency list representation 
+class Graph 
+{ 
+    int V;    // No. of vertices 
+    list<int> *adj; // Pointer to an array containing adjacency lists
+    void DFSUtil(int v, bool visited[]); // A recursive function used by DFS 
+public: 
+    Graph(int V);   // Constructor 
+  
+    
+    void addEdge(int v, int w); // function to add an edge to graph 
+  
+    void DFS(int v);     // DFS traversal of the vertices  reachable from v 
+}; 
+  
+Graph::Graph(int V) 
+{ 
+    this->V = V; 
+    adj = new list<int>[V]; 
+} 
+  
+void Graph::addEdge(int v, int w) 
+{ 
+    adj[v].push_back(w); // Add w to v’s list. 
+  //adj[w].push_back(v); add this line to make it bidirectional
+    
+} 
+void Graph::DFSUtil(int v, bool visited[]) 
+{ 
+    visited[v] = true;     // Mark the current node as visited and print it 
+    cout << v << endl; 
+      // Recur for all the vertices adjacent to this vertex v
+
+    list<int>::iterator i; // this iterator will traverse the adjacent vertices of (v) in its adjacency list
+    for (i = adj[v].begin(); i != adj[v].end(); ++i) 
+        if (!visited[*i]) //and if the vertex is already not visited then we will call our dfs function
+            DFSUtil(*i, visited); 
+} 
+  
+// DFS traversal of the vertices reachable from v. 
+// It uses recursive DFSUtil() 
+void Graph::DFS(int v) // it is used as an intialization // really not needed we can do this work in the int main fn just
+                          // like in previous example
+{ 
+    // Mark all the vertices as not visited 
+    bool *visited = new bool[V]; 
+    for (int i = 0; i < V; i++) 
+        visited[i] = false; 
+  
+    // Call the recursive helper function 
+    // to print DFS traversal 
+    DFSUtil(v, visited); 
+} 
+  
+// Driver code 
+int main() 
+{ 
+    // Create a graph given in the above diagram 
+    int n;
+    int e;
+    cin>>n>>e;
+    Graph g(n);
+    for(int i=0;i<e;i++){
+        int a,b;
+        cin>>a>>b;
+        g.addEdge(a,b);
+    }
+ //added above lines to take input from user just like in previous example
+ /*   g.addEdge(0, 1); 
+    g.addEdge(0, 2); 
+    g.addEdge(1, 2); 
+    g.addEdge(2, 0); 
+    g.addEdge(2, 3); 
+    g.addEdge(3, 3); 
+  */
+    cout << "Following is Depth First Traversal"
+            " (starting from vertex 2) \n"; 
+    g.DFS(0);
+   // g.DFS(2); 
+  
+    return 0; 
+}                                                               
+                                                                 
+                                                                 
