@@ -40,23 +40,23 @@ time it doesnt have to be calculated again and the old results answer can be use
     m=length of string s1
     n=length of string s2
     
-    int LCS(string s1, string s2,int m,int n){
-    //base case will be when 1)string length s1=0 and s2!=0 , then return NULL ( no lcs) 
-    //2)string length s1!=0 and s2=0 , return NULL
-    //3)both the strings lenth s1=s2=0; return NULL
+ >   int LCS(string s1, string s2,int m,int n){
+    base case will be when 1)string length s1=0 and s2!=0 , then return NULL ( no lcs) 
+    2)string length s1!=0 and s2=0 , return NULL
+    3)both the strings lenth s1=s2=0; return NULL
     
     (if len.s1=0 || len s2=0) return NULL;
     
-    //since it is a top down approach we will compare the characters and the strings at the end of both of the strings i.e at
-    // positions s1[m-1] and s[n-1] , case 1)if they are equal then add +1 to the count and check the remaining s1[m-2] , s2[n-2]
-    //recursively ie LCS(s1,s2, m-1, n-1)
-    //case 2) they are unqual the return the maximum of a) (s1,s2,m-1,n) b) (s1,s2,m,n-1) becasue there is a possibility the the last
-    //character of s1 can match with second last of s2 or last of s2 can match with second last of s1.
-    //we will recursively solve
+ >   since it is a top down approach we will compare the characters and the strings at the end of both of the strings i.e at
+     positions s1[m-1] and s[n-1] , case 1)if they are equal then add +1 to the count and check the remaining s1[m-2] , s2[n-2]
+    recursively ie LCS(s1,s2, m-1, n-1)
+    case 2) they are unqual the return the maximum of a) (s1,s2,m-1,n) b) (s1,s2,m,n-1) becasue there is a possibility the the last
+    character of s1 can match with second last of s2 or last of s2 can match with second last of s1.
+    we will recursively solve
     
-    //matrix will store base case at matrix[0][m] and matrix[0][n] so to store the results we need to ,ake a matrix of size
-    //MATRIX[M+1][N+1]
-    /* 
+ >  matrix will store base case at matrix[0][m] and matrix[0][n] so to store the results we need to ,ake a matrix of size
+    MATRIX[M+1][N+1]
+     
        
       0 e k e l s
     0 (B A S E C A S E)  <- this whole row solution is the answer from our base cases ( in case string 2 is NULL )
@@ -67,10 +67,12 @@ time it doesnt have to be calculated again and the old results answer can be use
       ^ this whole column is the answer from our base case ( in case string 1 = NULL )     
                 
     
-    here the first zero in here represents the possibility of strings to be NULL
+>    here the first zero in here represents the possibility of strings to be NULL
     hence the actul answer to our subproblems are stored from [1,1] till [m+1,n+1] and the answer to our dp problem is at
     matrix[m+1][n+1]
-    }
+    
      
-   
+>    when we are at matrix[1][1] we are basically checking string at postion 1 of string 1 and string 2 ie frist characters 
+    of both
 
+> initialize our DP by memset to 0 here for LCS 
