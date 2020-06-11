@@ -76,3 +76,58 @@ time it doesnt have to be calculated again and the old results answer can be use
     of both
 
 > initialize our DP by memset to 0 here for LCS 
+
+https://www.geeksforgeeks.org/longest-common-subsequence-dp-using-memoization/
+
+#include <bits/stdc++.h> 
+using namespace std; 
+  
+int max(int a, int b);  
+/* Returns length of LCS for X[0..m-1], Y[0..n-1] */
+int lcs( char *X, char *Y, int m, int n,int **matrix )  
+{   if (m == 0 || n == 0)
+       
+        return 0;
+    if(matrix[m][n]!=0) return matrix[m][n];
+      
+    if (X[m-1] == Y[n-1])  {
+        matrix[m][n]=1 + lcs(X, Y, m-1, n-1,matrix);
+        return matrix[m][n];}  
+    else{
+        matrix[m][n]=max(lcs(X, Y, m, n-1,matrix), lcs(X, Y, m-1, n,matrix));
+        return matrix[m][n];}  
+}  
+  
+/* Utility function to get max of 2 integers */
+int max(int a, int b)  
+{  
+    return (a > b)? a : b;  
+}  
+  
+/* Driver code */
+int main()  
+{  
+    char X[] = "AGGTAB";  
+    char Y[] = "GXTXAYB";  
+      
+    int m = strlen(X);  
+    int n = strlen(Y);  
+    int ** matrix= new int*[n+1];
+    for(int i=0;i<n;i++){
+        matrix[i]=new int[m+1];
+    }
+    memset(matrix,0,sizeof(matrix));
+    cout<<"Length of LCS is "<< lcs( X, Y, m, n,matrix ) ;  
+      
+    return 0;  
+}  
+
+notice that the size of dp is m+1 and n+1 and its relative positioning in the matrix.
+
+
+USING LCS WE CAN SOLVE 13 FURTHER SIMILAR QUESTIONS.
+
+
+
+
+
