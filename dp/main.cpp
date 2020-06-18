@@ -54,7 +54,7 @@ time it doesnt have to be calculated again and the old results answer can be use
     character of s1 can match with second last of s2 or last of s2 can match with second last of s1.
     we will recursively solve
     
- >  matrix will store base case at matrix[0][m] and matrix[0][n] so to store the results we need to ,ake a matrix of size
+ >  matrix will store base case at matrix[0][0...m] and matrix[0...n][0] so to store the results we need to ,ake a matrix of size
     MATRIX[M+1][N+1]
      
        
