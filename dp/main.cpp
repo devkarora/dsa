@@ -146,4 +146,8 @@ LONGEST COMMON SUBSEQUENCE
 15)Minimum number of insertions in a string to make it a palindrome
 
 
-
+1) Solved
+2)theoretically solved using the matrix
+3) lenght.str1 + length.str2 - LCS(str1.str2)
+4)
+5)
