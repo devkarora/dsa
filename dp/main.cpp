@@ -112,10 +112,10 @@ int main()
       
     int m = strlen(X);  
     int n = strlen(Y);  
-    int ** matrix= new int*[n+1];
+    int ** matrix= new int*[m+1];
     for(int i=0;i<n;i++){
-        matrix[i]=new int[m+1];
-    }
+        matrix[i]=new int[n+1];
+    } // m+1 rows x n+1 columns
     memset(matrix,0,sizeof(matrix));
     cout<<"Length of LCS is "<< lcs( X, Y, m, n,matrix ) ;  
       
