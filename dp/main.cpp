@@ -127,7 +127,22 @@ notice that the size of dp is m+1 and n+1 and its relative positioning in the ma
 
 USING LCS WE CAN SOLVE 13 FURTHER SIMILAR QUESTIONS.
 
+LONGEST COMMON SUBSEQUENCE
 
+1) Longest common subsequence
+2)Printing LCS
+3) Shortest common supersequence
+4) print SCS
+5)Minimum number of insertions/deletions to comvert from string A -> B
+6)Largest repeating subsequence
+7)length of largest subsequence of string A which is a substring of string B
+8)Subsequence Pattern matching
+9)Count how many time A string appears in string B
+10)Largest palindromic subsequence
+11)largest palindrmic subsequence
+12)Count of palindrominc substring
+14)Minimum number of deletions in a string to make it a palindrome
+15)Minimum number of insertions in a string to make it a palindrome
 
 
 
