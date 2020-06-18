@@ -26,9 +26,10 @@ time it doesnt have to be calculated again and the old results answer can be use
             2) need to see the return type
             3)see carefully whats the base case
               
-        string ABCDE 
-        substrings A,B,C,D,E,AB,BC,CD,DE,ABC,BCD,CDE,ABCD,BCDE,ABCDE ( BASIALLY CONTINUOUS STRINGS)
-        subsequences A,B,C,D,E,AB,AV,AD,AE,BC,BD,BE,CD,CE,DE,ABC,ABD,ABE....(NEED NOT TO BE CONTINUOUS)
+ types of  strings :  ABCDE 
+ substrings A,B,C,D,E,AB,BC,CD,DE,ABC,BCD,CDE,ABCD,BCDE,ABCDE ( BASIALLY CONTINUOUS STRINGS)
+ subsequences A,B,C,D,E,AB,AV,AD,AE,BC,BD,BE,CD,CE,DE,ABC,ABD,ABE....(NEED NOT TO BE CONTINUOUS)
+ supersequence: shortest string that has both str1 and str2 as subsequences. str1 = "AGGTAB",  str2 = "GXTXAYB" answer = "AGXGTXAYB"
    
               
   >LONGEST COMMON SUBSEQUENCE
