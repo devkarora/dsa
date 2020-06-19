@@ -290,4 +290,28 @@ int main(){
     printBFS(matrix , n , 0, visited);
 }
 
- 
+DISCONNECTED COMPONENTS
+there can be multiple comonents of a graph. Hence we need to see which nodes are visied and call the dfs/bfs only
+on the unvisited nodes. We can do this by keeoing the visited array global and traversing it once only.
+for(int i=0;i<n;i++){
+if(!visited[i]){
+  printBFS(....., i);
+  }
+}
+This above loop only works on the unvisited components and hence it covers all the nodes.
+                                                                 
+                                                                 
+                                                                 
+
+
+
+
+
+
+
+
+
+
+
+
+                                                                 
