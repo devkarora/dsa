@@ -249,6 +249,45 @@ we do above steps untill all the queue is empty
 
 
 
-int main
+#include<bits/stdc++.h>
+using namespace std;
+void printBFS(int ** matrix, int n, int start,bool *visited){
+    queue<int> a ;
+    a.push(start);
+    visited[start]=1;
+    while(!a.empty()){
+        start=a.front();
+        a.pop();
+        cout<<start<<" ";
+        for(int i=0;i<n;i++){
+            if(i==start ) continue;
+            if(matrix[i][start]==1 && visited[i]!=1){
+                a.push(i);
+                visited[i]=1;
+            }
+        }
+    }
+    
+}
+int main(){
+    int n;
+    int e;
+    cin>>n>>e;
+    int ** matrix = new int* [n];
+    for(int i=0;i<n;i++){
+        matrix[i]=new int [n];
+        for(int j=0;j<n;j++) {
+            matrix[i][j] = 0; }
+        }
+    for(int j = 0; j<e;j++){
+        int s,e;
+        cin>>s>>e;
+        matrix[s][e] = 1;
+        matrix[e][s] = 1;
+    }
+    bool * visited = new bool [n];
+    for(int i=0;i<n;i++) { visited[i] = false; }
+    printBFS(matrix , n , 0, visited);
+}
 
  
