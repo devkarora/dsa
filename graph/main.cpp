@@ -236,5 +236,19 @@ int main()
   
     return 0; 
 }                                                               
+_____________________________________________________________________________________________________________-----
+BREADTH FIRST SEARCH 
+
+just like dfs , bfs is a traversal algorithm in we traverse level order wise just like in trees we do level orger.
                                                                  
-                                                                 
+1) we visit a node and add it to a QUEUE
+2)Then we visit the nodes attachd to this node and add them to queue. Whenever we add an node to queue we mark them as visited as well 
+as convention.
+3)after visiting every node connected to the above node, we pop it and do the above steps with the next node in the queue.
+we do above steps untill all the queue is empty
+
+
+
+int main
+
+ 
